@@ -1,0 +1,27 @@
+<view class='orders' wx:if="{{itemToBuyList.length > 0}}">
+  <view class='order clearfix' wx:for="{{itemToBuyList}}" wx:key="{{index}}">
+    <view class='orderId clearfix'>
+      <view class='orderIdNum'>订单编号:{{item.orderId}}</view>
+      <view class='del_btn' bindtap='delOrder' data-order-id="{{item.orderId}}">删除</view>
+    </view>
+    <view class='dateTime'>订单时间:{{item.orderTime}}</view>
+
+    <view wx:for="{{item.itemToBuy}}" wx:key="{{keys}}" wx:for-item="order" wx:for-index="dex">
+      <view class='items clearfix' bindtap='goToDetail'data-item-id="{{order.itemId}}">
+        <view class='items_image'>
+          <image src='{{order.itemImage}}'></image>
+        </view>
+        <view class='item_info clearfix'>
+          <view class='item_name'>{{order.itemName}}</view>
+          <view class='item_pn clearfix'>
+            <view class='item_price'>￥{{order.itemPrice}}</view>
+            <view class='item_num'>×{{order.num}}</view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class='totalSum'>总价￥{{item.totalSum}}</view>  
+    
+  </view>
+</view>
+<view wx:else>还没有订单</view>

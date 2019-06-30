@@ -1,0 +1,12 @@
+<view>
+  <view class='active clearfix'>
+    <view class='active_{{index%2==0? "left":"right"}}'  wx:for="{{itemActiveList}}" wx:key="{{index}}" bindtap='goToDetail' data-item-id="{{item.itemId}}">
+      <image src='{{item.itemImage}}' mode='widthFix' class='auto-img'></image>
+      <view class='name'>{{item.Name}}</view>
+      <view class='price clearfix'>
+        <view class='newPrice'>活动价:￥{{item.itemHotPrice}}</view>
+        <view class='oldPrice'>￥{{item.itemPrice}}</view>
+      </view>
+    </view>
+  </view>
+</view>

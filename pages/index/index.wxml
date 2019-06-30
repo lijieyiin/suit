@@ -1,0 +1,68 @@
+<view class='index'>
+  <!-- 轮播图 -->
+  <view class="page-section page-section-spacing swiper">
+    <swiper style='height:{{height}}px;' indicator-dots='{{indicatorDots}}' autoplay='{{autoplay}}'>
+      <block wx:for="{{imageSrc}}" wx:key="*this">
+        <swiper-item>
+          <image src='{{item}}' bindload='imageAuto' class='swiper_image' mode='widthFix'></image>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+  <!-- 轮播图 end -->
+
+  <!-- 分类 -->
+  <view class='fenlei clearfix'>
+    <view class='fenlei_box' wx:for="{{iconType}}" wx:key="*this">
+      <view class='fenlei_wrap'>
+        <image src='{{item.iconUrl}}' class='swiper_image' mode='widthFix'></image>
+        <text>{{item.iconText}}</text>
+      </view>
+
+    </view>
+  </view>
+  <!-- 分类 end-->
+
+  <!-- 标题 -->
+  <view class='title'>
+    <text>电影推荐</text>
+  </view>
+  <!-- 标题 end-->
+
+  <!-- 电影推荐 -->
+  <view class='movie' wx:for="{{movieList}}" wx:key="*this">
+    <view class='movieText'>
+      <text>{{item.movieText}}</text>
+    </view>
+    <view class='movieImage'>
+      <image src='{{item.movieSrc}}' class='swiper_image' mode='widthFix'></image>
+    </view>
+  </view>
+  <!-- 电影推荐 end-->
+
+  <!-- 商品 -->
+  <view>
+    <view class='title'>猜你喜欢</view>
+    <view wx:for="{{itemsList}}" wx:key="{{index}}">
+      <!-- <navigator url="/pages/detail/detail?itemId={{item.itemId}}" hover-class="navigator-hover"> -->
+      <view class='items' bindtap='goToDetail' data-item-id="{{item.itemId}}">
+        <view class='items_left'>
+          <image src='{{item.itemImage}}' class='swiper_image' mode='widthFix'></image>
+        </view>
+        <view class='items_right'>
+          <view class='item_name'>{{item.itemName}}</view>
+          <view class='item_address'>{{item.itemAddress}}</view>
+          <view class='clearfix'>
+            <view class='item_price'>￥{{item.itemPrice}}</view>
+            <view class='item_HotPrice'>￥{{item.itemHotPrice}}</view>
+            <view class='item_car'>
+             <image src='../../image/car.png' catchtap='addItem' data-item-index="{{index}}" data-item-id="{{item.itemId}}" class='swiper_image' mode='widthFix'></image>
+            </view>
+          </view>
+        </view>
+      </view>
+      <!-- </navigator> -->
+    </view>
+  </view>
+  <!-- 商品 end-->
+</view>

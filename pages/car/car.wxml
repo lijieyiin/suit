@@ -1,0 +1,53 @@
+<view class='car_body' wx:if="{{carList.length > 0}}">
+  <view wx:for="{{carList}}" wx:key="{{index}}">
+    <view class='car'>
+      <view class='check'>
+        <checkbox checked="{{item.isCheck1}}" bindtap='singleChecked' data-check-id="{{88}}" data-index-check="{{index}}"></checkbox>
+      </view>
+      <view class='car_image_left'>
+      <navigator url="/pages/detail/detail?itemId={{item.itemId}}" hover-class="navigator-hover">
+        <image src='{{item.itemImage}}' mode='widthFix' class='auto-img'></image>
+      </navigator>
+      </view>
+      <view class='car_item_right'>
+        <view class='car_name'>{{item.itemName}}</view>
+        <view class='car_item_price'>￥{{item.itemPrice}}</view>
+        <view class='car_item_bar'>
+          <text class='car_item_bar_reduce' bindtap="reduceItem" data-index="{{index}}">-</text>
+          <text class='car_item_bar_num'>{{item.num}}</text>
+          <text class='car_item_bar_add' bindtap="addItem" data-index="{{index}}">+</text>
+        </view>
+      </view>
+      <view class='car_item_del'>
+        <image src='../../image/shanchu.png' mode='widthFix' class='auto-img' bindtap="delItem" data-index="{{index}}"></image>
+      </view>
+    </view>
+  </view>
+
+
+  <view class='car_news' wx:if="{{leftMoney>0}}">
+    <view class='car_new_pass'>
+      <text>还差</text>
+      <text class='car_news_money'>￥{{leftMoney}}</text>
+      <text>元包邮，前往凑单</text>
+    </view>
+    <view class='car_find'>
+      <image src='../../image/icon-arrow.png' mode='widthFix' class='auto-img'></image>
+    </view>
+  </view>
+
+  <view class='car_bottom_item'>
+    <view class='bottom_check'>
+      全选
+      <checkbox checked='{{selectAllStatus}}' bindtap='checkAllItem'></checkbox>
+    </view>
+    <view class='bottom_price'>
+      <text>总价</text>
+      <text class="car_bottom_item_sum">￥{{carBottomItemSum}}</text>
+    </view>
+    <view class='car_bottom_button' bindtap='goToOrder'>下单</view>
+  </view>
+</view>
+<view class = "nullItem" wx:else>
+购物车空空如也！！
+</view>

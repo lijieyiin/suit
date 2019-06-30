@@ -1,0 +1,123 @@
+.index{
+  padding-bottom: 3px;
+}
+.swiper_image{
+  width: 100%;
+}
+
+/* 分类 */
+.fenlei{
+  width: 100%;
+  background-color: #fff;
+}
+.clearfix::after{
+  content: "";
+  display: block;
+  clear: both;
+}
+.fenlei_wrap{
+  width: 25%;
+  text-align: center;
+   margin-top: 15px;
+   margin-bottom: 10px;
+  float: left;
+}
+.fenlei_wrap image{
+  width: 40px;
+  height: 40px;
+
+}
+.fenlei_wrap text{
+  font-size: 12px;
+  display: block;
+  text-align: center;
+}
+/* 分类 end*/
+
+/* 标题 */
+.title{
+  margin-top: 15px;
+  height: 40px;
+  background-color: #fff;
+  border-bottom: 1px solid #ccc;
+  line-height: 40px;
+  color:#313131;
+}
+/* 标题 end*/
+
+/* 电影推荐 */
+.movie{
+  background-color: fff;
+}
+.movieImage{
+  font-size: 0px;/*解决子元素image 的偏移*/
+}
+.movieText{
+  text-align: center;
+  font-size: 16px;
+}
+.movieText text{
+  display: block;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+/* 电影推荐 end*/
+
+/* 商品 */
+.items{
+  position: relative;
+  background-color: #fff;
+  padding: 5px 5px;
+}
+.items_left{
+  height: 80px;
+  line-height: 80px;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+.items_left image{
+  width: 80px;
+   line-height: 80px;
+  height: 80px;
+}
+.items_right{
+  height: 80px;
+  padding-left: 100px;
+  padding-top: 10px; 
+}
+.items_right .item_name{
+  font-size: 16px;
+  color: #000000;
+  font-weight: bold;
+  height: 20px;
+  overflow: hidden;
+}
+.items_right .item_address{
+  font-size: 12px;
+  color: #BDBDBD;
+  padding-top: 5px;
+}
+.items_right .item_price{
+  font-size: 14px;
+  color: #FF68BE;
+  margin-top: 20px;
+  float: left;
+} 
+.items_right .item_HotPrice{
+  float: left;
+  color: black;
+  font-size: 10px;
+  text-decoration: line-through;
+  padding-left: 10px;
+  margin-top: 22px;
+}
+.items_right .item_car{
+  float: right;
+  margin-top: 20px;
+}
+.items_right .item_car image{
+  width: 20px;
+  height: 20px;
+}
+/* 商品 end*/

@@ -1,0 +1,75 @@
+<view class='detail'>
+  <!-- 轮播图 -->
+<view class="page-section page-section-spacing swiper" wx:if="{{itemsDetail.itemDetailImages.length>1}}">
+  <swiper style="height: {{height}}px;"  indicator-dots='{{indicatorDots}}' autoplay='{{autoplay}}'>
+    <block wx:for="{{itemsDetail.itemDetailImages}}" wx:key="*this">
+      <swiper-item>
+        <image src='{{item}}' bindload="loadImageSwiper" mode='widthFix' class='swiper_image' ></image>
+      </swiper-item>
+    </block>
+  </swiper>
+</view>
+
+<view class="page-section page-section-spacing swiper" wx:else>
+
+   <image src='{{itemsDetail.itemDetailImages[0]}}' mode='widthFix' class='swiper_image'></image>
+</view>
+<!-- 轮播图 end -->
+
+<!-- 商品名称，价格 -->
+<view class='detail_info'>
+  <view class='detail_name clearfix'>
+    <view class="detail_test fl">
+      <view class='name_left'>{{itemsDetail.itemName}}</view>
+      <view class='btn_right clearfix' bindtap='collectItem'>
+        <image src='{{image}}' class='swiper_image' mode='widthFix'></image>
+        <view class='btn_text'>{{btnText}}</view>
+      </view>
+    </view>
+    <view class='detail_price fl'>
+      <text class='price_new'>￥{{itemsDetail.itemPrice}}</text>
+      <text class='price_old'>￥{{itemsDetail.itemHotPrice}}</text>
+    </view>
+  </view>
+
+  <view class='detail_server'>
+    *{{detailServer}}
+  </view>
+</view>
+
+<view class='detail_news clearfix'>
+  <view class='detail_news_icon fl'>
+    <image src='{{detailNewsIcon}}' class='swiper_image' mode='widthFix'></image>
+  </view>
+  <view class='detail_news_info fl'>
+    {{itemsDetail.itemDescription}}
+  </view>
+</view>
+<!-- 商品名称，价格 end-->
+<view class='deteil_usage'>
+    <view>【品牌】<text class='t1'>{{t1}}</text></view>
+    <view>【产地】<text  class='t2'>{{t2}}</text></view>
+    <view>【净含量】<text  class='t3'>{{t3}}g/罐</text></view>
+    <view>【保质期】<text  class='t4'>{{t4}}月</text></view>
+    <view>【生产日期】<text  class='t5'>{{t5}}</text></view>
+    <view>【储蕃方法】<text  class='t6'>{{t6}}</text></view>
+    <view>【使用人群】<text  class='t7'>{{t7}}</text></view>
+</view>
+
+<view class='detail_images'>
+  <text>商品详情</text>
+  <image src='{{detailImages}}' class='swiper_image' mode='widthFix'></image>
+</view>
+
+<!-- 底部导航 -->
+<view class='detail_bottom clearfix'>
+  <view class='btn1' bindtap='goToCar'>
+    <image src='{{btn1}}' class='swiper_image' mode='widthFix'></image>
+    <text>{{numItem}}</text>
+  </view>
+  <view class='btn2' bindtap='goToShop'>前往商城</view>
+  <view class='btn3' bindtap='addItem'>加入购物车</view>
+  <view class='btn4'>前往支付</view>
+</view>
+<!-- 底部导航 end-->
+</view>

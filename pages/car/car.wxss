@@ -1,0 +1,148 @@
+/* 购物车 */
+.car_body{
+  background-color: #F5F6F7;
+}
+.auto-img{
+  width: 100%;
+  display: block;
+}
+.car{
+  margin: 1px auto;
+  overflow: hidden;/*清除浮动*/
+  background-color: #fff;
+  padding: 10px 0;
+}
+.check{
+  width: 36px;
+  float: left;
+  text-align: center;
+  margin-top: 25px;
+}
+.check checkbox{
+  width:26px;
+  height: 26px;
+ 
+}
+.car_image_left{
+  float: left;
+  width: 80px;
+}
+.car_image_left image{
+  width: 80px;
+  line-height: 80px;
+  margin:0 auto;
+}
+.car_item_right{
+  width: calc(100% - 36px - 80px-30px);
+  float: left;
+  padding-left:10px;
+}
+.car_name{
+  font-size: 14px;
+}
+.car_item_price{
+  padding: 8px 5px; 
+  color: red;
+  font-size:12px; 
+}
+.car_item_bar{
+  float: left;
+  overflow: hidden;
+}
+.car_item_bar text{
+  float: left;
+  color: #B2B2B2;
+}
+.car_item_bar_add,
+.car_item_bar_reduce{
+    width: 25px;
+    height: 25px;
+    border: 1px solid #B2B2B2;
+    text-align: center;
+    line-height: 26px;
+}
+.car_item_bar_num{
+    width: 40px;
+    height: 25px;
+    line-height: 25px;
+    border-top: 1px solid #B2B2B2;
+    border-bottom: 1px solid #B2B2B2;
+    text-align: center;
+    font-size: 12px;
+}
+
+.car_item_del{
+  float: right;
+  width: 30px;
+  margin-top: 22px;
+  /* margin-top: 30px; */
+  /* overflow: hidden; */
+}
+.car_item_del image{
+  /* display: block; */
+  width: 20px;
+  height: 20px;
+}
+.car_news{
+  background-color: #fff;
+  height: 40px;
+  position: relative;
+}
+.car_new_pass{
+  padding-left: 94px;
+  height: 40px;
+  line-height: 40px;
+}
+.car_news text{
+  color: #B2B2B2;
+  font-size: 14px; 
+}
+.car_new_pass .car_news_money{
+  color: red;
+}
+.car_find image{
+  width: 14px;
+  height: 14px;
+  position: absolute;
+  right: 12px;
+  bottom: 12px;
+}
+.car_bottom_item{
+  width: 100%;
+  position: fixed;
+  bottom: 0px;
+  background-color: #fff;
+  margin-bottom: 1px;
+  font-size: 16px;
+  overflow: hidden;
+}
+
+.car_bottom_item_sum{
+  color: red;
+}
+.car_bottom_button{
+  margin: 10px;
+  width: 80px;
+  height: 30px;
+  line-height: 30px;
+  border-radius: 5px;
+  background-color: #FF7E3A;
+  color: #fff;
+  text-align: center;
+  float: right;
+
+}
+.bottom_check{
+  float: left;
+  margin-top: 16px;
+}
+.bottom_price{
+  float: left;
+  margin-top: 16px;
+  
+}
+.nullItem{
+  font-size: 16px;
+  text-align: center;
+}
+/* 购物车 end*/

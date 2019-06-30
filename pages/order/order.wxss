@@ -1,0 +1,77 @@
+.clearfix::after{
+  content: "";
+  display: block;
+  clear: both;
+}
+.orders{
+  background-color: #ccc;
+}
+.order{
+  padding-top: 10px;
+  background-color: #fff;
+  margin-bottom: 5px;
+}
+.orderId{
+  margin: 5px;
+  font-size: 14px;
+}
+.dateTime{
+  width: 100%;
+  font-size: 14px;
+  float: left;
+  margin: 5px;
+  color: grey;
+}
+.items{
+  width: 100%;
+  float: left;
+  margin: 5px;
+  border-top:1px solid #ccc; 
+}
+.totalSum{
+  float: right;
+  color: grey; 
+  font-size: 14px;
+  padding-bottom: 5px;
+}
+.orderId .orderIdNum{
+  float: left;
+}
+.orderId .del_btn{
+  float: right;
+  color: red;
+  margin-right: 10px;
+}
+.items .items_image{
+  font-size: 0;
+  margin: 5px;
+  float: left;
+}
+.items .items_image image{
+  width: 60px;
+  height: 60px;
+}
+.items .item_info{
+  float: left;
+  margin: 5px;
+}
+.item_info .item_name{
+  width: 100%;
+  margin: 5px;
+  font-size: 16px;
+  float: left;
+}
+.item_info .item_pn{
+  margin: 5px;
+  float: left;
+  font-size: 14px;
+}
+.item_info .item_pn .item_price{
+  float: left;
+  color: red;
+}
+.item_info .item_pn .item_num{
+  color: grey;
+  margin-left: 20px;
+  float: left;
+}

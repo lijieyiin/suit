@@ -1,0 +1,15 @@
+<view class='wode_header'>
+    <view class='wode_image'>
+      <!-- <image src="{{myImage}}"><open-data type="userAvatarUrl"></open-data></image> -->
+      <open-data type="userAvatarUrl"></open-data>
+    </view>
+    <view class='wode_name'>
+      <open-data type="userNickName"></open-data>
+    </view> 
+</view>
+<view wx:for="{{itemList}}" wx:key="*this">
+  <view class='item' bindtap='goToUrl' data-index="{{index}}">
+    {{item}}
+    <image src='../../image/icon-arrow.png'></image>
+  </view>
+</view>
